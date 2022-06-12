@@ -1,4 +1,4 @@
-package sample;
+package main.helpers;
 
 public class StateHelpers {
     public static boolean containsNonNumericals(String binaryValue) throws IllegalArgumentException {

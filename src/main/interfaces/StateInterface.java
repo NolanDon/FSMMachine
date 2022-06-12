@@ -1,4 +1,4 @@
-package sample;
+package main.interfaces;
 
 // PRIMARY INTERFACE FOR CLASSES TO CONFORM TO NEEDED METHODS
 public interface StateInterface {

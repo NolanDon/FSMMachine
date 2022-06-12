@@ -1,4 +1,10 @@
-package sample;
+package main;
+
+import main.classes.*;
+import main.enums.*;
+import main.helpers.*;
+import main.interfaces.MachineStateInterface;
+
 import java.util.HashMap;
 
 public class FSMMachineController {
@@ -12,8 +18,8 @@ public class FSMMachineController {
         HashMap <State, MachineStateInterface> stateMapper = new HashMap();
 
         stateMapper.put(State.STATE_ZERO, new StateZero());
-        stateMapper.put(State.STATE_ONE, new StateOne());
-        stateMapper.put(State.STATE_TWO, new StateTwo());
+        stateMapper.put(State.STATE_ONE, (MachineStateInterface) new StateOne());
+        stateMapper.put(State.STATE_TWO, (MachineStateInterface) new StateTwo());
 
         return stateMapper.get(state);
     }

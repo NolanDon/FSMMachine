@@ -1,11 +1,15 @@
-package sample;
+package main.classes;
 
-public class StateZero implements MachineStateInterface {
+import main.FSMMachineController;
+import main.enums.*;
+import main.interfaces.*;
+
+public class StateTwo implements MachineStateInterface {
 
     @Override
     public void doWork(StateInterface state, String binaryValue) {
 
-        if (State.valueOfThis(binaryValue).equals(State.STATE_ZERO)) {
+        if (State.valueOfThis(binaryValue).equals(State.STATE_ONE)) {
             // KEEP STATE
             return;
         } else {
@@ -14,5 +18,5 @@ public class StateZero implements MachineStateInterface {
         }
     }
 
-    public int getValue() { return 0; }
+    public int getValue() { return 2; }
 }

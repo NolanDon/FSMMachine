@@ -1,9 +1,9 @@
+import main.FSMMachineController;
+import main.StartEngine;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import sample.FSMMachineController;
-import sample.StartEngine;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -18,7 +18,7 @@ public class UnitTests {
     FSMMachineController fsm = new FSMMachineController();
     private static final double DELTA = 1e-15;
 
-    /** START STATE FUNCTION */
+    /** START STATE */
     @Test
     public void testStartStateResultTrue_1() {
         Assert.assertEquals(1, fsm.startState("1010"), DELTA);
@@ -45,7 +45,7 @@ public class UnitTests {
         assertThrows(IllegalArgumentException.class, () -> fsm.startState("hello"));
     }
 
-    /** FULL TEST FROM START ENGINE */
+    /** START ENGINE */
     @Test
     public void assertEmptyStringThrowsException() {
         assertThrows(IllegalArgumentException.class, () -> startEngine = new StartEngine(""));
