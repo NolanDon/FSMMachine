@@ -45,7 +45,7 @@ public class MyFirstTest {
         assertThrows(IllegalArgumentException.class, () -> fsm.startState("hello"));
     }
 
-    /** FULL TEST FROM START */
+    /** FULL TEST FROM START ENGINE */
     @Test
     public void assertEmptyStringThrowsException() {
         assertThrows(IllegalArgumentException.class, () -> startEngine = new StartEngine(""));
