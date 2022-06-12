@@ -1,15 +1,12 @@
 import main.FSMMachineController;
 import main.StartEngine;
 import org.junit.Assert;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 public class UnitTests {
-    
+
     StartEngine startEngine;
 
     FSMMachineController fsm = new FSMMachineController();
