@@ -1,7 +1,7 @@
 package main.classes;
 
 import main.FSMMachineController;
-import main.enums.State;
+import main.enums.*;
 import main.interfaces.*;
 
 public class StateOne implements MachineStateInterface {

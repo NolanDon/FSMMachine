@@ -1,7 +1,8 @@
 package main.classes;
-import main.interfaces.*;
-import main.enums.*;
+
 import main.FSMMachineController;
+import main.enums.*;
+import main.interfaces.*;
 
 public class StateZero implements MachineStateInterface {
 
