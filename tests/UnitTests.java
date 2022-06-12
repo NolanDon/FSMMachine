@@ -8,7 +8,7 @@ import sample.StartEngine;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public class MyFirstTest {
+public class UnitTests {
 
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
