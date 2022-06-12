@@ -1,5 +1,4 @@
-# FSMMachine
-
+# FSMMachine w/ State Design Pattern / JUnit Testing
 
 ## IntelliJ IDE
 
