@@ -9,10 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class UnitTests {
-
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
-
+    
     StartEngine startEngine;
 
     FSMMachineController fsm = new FSMMachineController();
