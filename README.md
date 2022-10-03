@@ -6,3 +6,4 @@
 
 -> Right Click `tests` folder -> Run 'All Tests'
 # SemanticVersioningJava
+# SemanticVersioningJava
