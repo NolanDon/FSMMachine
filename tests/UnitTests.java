@@ -1,4 +1,4 @@
-import main.FSMMachineController;
+import main.FSMVersionController;
 import main.StartEngine;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,34 +9,44 @@ public class UnitTests {
 
     StartEngine startEngine;
 
-    FSMMachineController fsm = new FSMMachineController();
-    private static final double DELTA = 1e-15;
+    FSMVersionController version = new FSMVersionController();
 
-    /** START STATE */
+
+//    nextVersion("1.2.3") === "1.2.4";
+//    nextVersion("0.9.9") === "1.0.0";
+//    nextVersion("1") === "2";
+//    nextVersion("1.2.3.4.5.6.7.8") === "1.2.3.4.5.6.7.9";
+//    nextVersion("9.9") === “10.0";
+
     @Test
     public void testStartStateResultTrue_1() {
-        Assert.assertEquals(1, fsm.startState("1010"), DELTA);
+        Assert.assertEquals(1, version.nextVersion("1.2.3"));
     }
 
     @Test
     public void testStartStateResultTrue_2() {
-        Assert.assertEquals(0, fsm.startState("110"), DELTA);
+        Assert.assertEquals(0, version.nextVersion("0.9.9"));
     }
 
     @Test
     public void testStartStateResultTrue_3() {
-        Assert.assertEquals(2, fsm.startState("11010100101010"), DELTA);
+        Assert.assertEquals(2, version.nextVersion("1"));
     }
 
     @Test
     public void testStartStateResultTrue_4() {
-        Assert.assertEquals(0, fsm.startState("1101001010101"), DELTA);
+        Assert.assertEquals(0, version.nextVersion("1.2.3.4.5.6.7.8"));
+    }
+
+    @Test
+    public void testStartStateResultTrue_5() {
+        Assert.assertEquals(0, version.nextVersion("9.9"));
     }
 
     /** EXCEPTIONS */
     @Test
     public void testInvalidBinaryCharsThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> fsm.startState("hello"));
+        assertThrows(IllegalArgumentException.class, () -> version.nextVersion("hello"));
     }
 
     /** START ENGINE */
